@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="sortcut icon" href="imagens/imgPagina.png" type="image/png"/>
+    <body background="imagens/image1.jpg"></body>
+    <link rel="stylesheet" type="text/css" href="frufru.css">
+    <title>Formulário</title>
+    
+    <script>
+        
+        document.addEventListener("DOMContentLoaded", () => {
+        function mostra() {
+            alert("Formulário entregue!");
+        }
+        var botaook=document.querySelector("#botao");
+            botaook.addEventListener("click", mostra);
+        });
+    </script>
+    
+</head>
+<body>
+    
+    <div>
+        <h1 id="titulo">Trabalhe Conosco!!</h1>
+        <p id="subtitulo">Complete com suas informações!</p>
+        <br>
+    </div>
+
+    <form>
+        <fieldset class="grupo">
+            <div class="campo">
+                <label for="nome"><strong>Nome</strong></label>
+                <input type="text" nome="nome" id="nome" required>
+            </div class="campo">
+            <div class="campo">
+                <label for="sobrenome"><strong>sobrenome</strong></label>
+                <input type="text" nome="Sobrenome" id="Sobrenome" required>
+            </div class="campo">
+        </fieldset>
+
+        <div class="campo">
+            <label for="email"><strong>Email</strong></label>
+            <input type="email" nome="email" id="email" required>
+        </div class="campo">
+
+        <div class="campo">
+            <labe><strong>Qual o tipo de vaga você gostaria de participar?</strong></label>
+            <label>
+                <input type="radio" name="emprego" value="efetivo" checked>Efetivo
+            </label>
+            <label>
+                <input type="radio" name="emprego" value="estagio">Estágio
+            </label>
+            <label>
+                <input type="radio" name="emprego" value="autonomo">Autônomo
+            </label>
+        </div class="campo">
+        <div class="campo">
+            <label for="senioridade"><strong>Qual sua escolaridade?</strong></label>
+            <select id="Senioridade">
+                <option selected disabled value="">Selecione</option>
+                <option>Ensido Fundamental Incompleto</option>
+                <option>Ensino Médio Incompleto</option>
+                <option>Ensino Médio Cursando</option>
+                <option>Ensido Médio Completo</option>
+                <option>Ensino Superior Incompleto</option>
+                <option>Ensino Superior Cursando</option>
+                <option>Ensino Superior Completo</option>
+            </select>
+        </div class="campo">
+
+        <fieldset class="grupo">
+            <div id="check">
+                <label><strong>Selecione as capacitações em que domina</strong></label>
+                <br>
+                <input type="checkbox" id="tecnologia-1" nome="tecnologia-1" value="Office">
+                <label for="tecnologia-1">Pacote Microsoft Office</label>
+                <input type="checkbox" id="tecnologia-1" nome="tecnologia-1" value="Info">
+                <label for="tecnologia-1">Conhecimento Básico em Informática</label>
+            </div class="campo">
+        </fieldset>
+
+        <div class="campo">
+            <br>
+            <label><strong>Conte um pouco sobre você:</strong></label>
+            <textarea name="experiencia" id="experiencia" style="width: 26em;" rows="6"></textarea>
+        </div class="campo">
+
+        <button class="botao" name="botao" id="botao" type="submit">Enviar Formulário</button>
+    </form>
+</body>
+</html>
